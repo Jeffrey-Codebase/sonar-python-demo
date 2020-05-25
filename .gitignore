@@ -1,0 +1,4 @@
+.scannerwork
+.coverage
+coverage.xml
+nosetests.xml
