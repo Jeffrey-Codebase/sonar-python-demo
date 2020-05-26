@@ -3,7 +3,7 @@
 deployProject (
     serviceName: "sonar-python-demo",
     projectType: "python",
-    testCommand: "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml tests/tests.py",
+    testCommand: "https_proxy=http://pkg.proxy.prod.jp.local:10080 pip install nose coverage nosexcover && nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml tests/tests.py",
     sonarQubeName: "SonarQubeDemo",
     skipBuild: "true",
     skipDockerBuild: "true",
