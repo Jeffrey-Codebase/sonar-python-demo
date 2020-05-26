@@ -1,0 +1,14 @@
+@Library("dsd-jenkins-k8s") _
+
+deployProject (
+    serviceName: "sonar-python-demo",
+    projectType: "python",
+    testCommand: "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml tests/tests.py",
+    sonarQubeName: "SonarQubeDemo",
+    skipBuild: "true",
+    skipDockerBuild: "true",
+    skipDockerPush: "true",
+    skipDeployment: "true",
+    ignoreGitHeadMove: "true",
+    targetEnv: "stg",
+    )
